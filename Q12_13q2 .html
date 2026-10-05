@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            width: 1000px;
+            margin: auto;
+            min-height: 400px;
+        }
+
+        .sidebar {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 250px;
+            padding: 20px;
+            background: lightblue;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            background: lightgreen;
+            min-height: 350px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                top: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>
+                This fixed-width layout has been converted
+                into a responsive layout using CSS positioning
+                and media queries.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>
